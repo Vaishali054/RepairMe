@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %} {% block content %} {% load static %}
+<div style="display: flex;" class="center-web">
+    <div class="detail-box">
+        <h1>Car Repair<br />And Mainatinence</h1>
+        <p class="slogan">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam
+            hic quis blanditiis aliquid ratione voluptas, aut rem reprehenderit omnis
+            alias adipisci cum similique, quo eaque repellendus facilis soluta commodi?
+        </p>
+        
+        <div class="btn-box">
+            <a href="{% url 'myapp:issue_create' %}" class="btn-1">Create Issue</a>
+            <!-- <a href="" class="btn-2">Contact Us</a> -->
+  </div>
+</div>
+<img src="{% static 'myapp/images/slider-img.png' %}" />
+<!-- <a href="{% url 'myapp:issue_list' %}">View Issues</a>
+ -->
+</div>
+<!-- Add any additional links or buttons for navigation -->
+<!-- Add any additional content or sections as needed -->
+{% endblock %}

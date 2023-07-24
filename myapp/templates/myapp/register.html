@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+
+
+<div class="center">
+
+    <form method="post" 
+    action="{% url 'myapp:issue_create' %}"
+    >
+        <h1 style="text-align: center; color: white;">Register Form</h1>
+        {% csrf_token %}
+        
+        <label for="{{ form.UserId.id_for_label }}">Name</label>
+        <input type="text" name="{{ form.field1.html_name }}" id="{{ form.field1.id_for_label }}" required>
+        <label for="{{ form.PhoneNumber.id_for_label }}">Phone Number</label>
+        <input type="text" name="{{ form.field1.html_name }}" id="{{ form.field1.id_for_label }}" required>
+        <label for="{{ form.PhoneNumber.id_for_label }}">Email</label>
+        <input type="email" name="{{ form.field1.html_name }}" id="{{ form.field1.id_for_label }}" required>
+        
+        
+        <button type="submit">Create Account</button>
+    </form>
+</div>
+    {% endblock %}
+    

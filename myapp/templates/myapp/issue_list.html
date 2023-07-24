@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h1>Issue List</h1>
+<ul>
+    {% for issue in issues %}
+    <li>
+        <a href="{% url 'myapp:issue_detail' issue.issueID %}">{{ issue.problem }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

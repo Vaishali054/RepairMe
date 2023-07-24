@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h1>Issue Detail</h1>
+<h2>{{ issue.problem }}</h2>
+<p>Location: {{ issue.location }}</p>
+<p>Status: {{ issue.get_status_display }}</p>
+<!-- Additional issue details -->
+{% endblock %}

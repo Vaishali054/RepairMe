@@ -1,0 +1,10 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h1>Agent Dashboard</h1>
+<ul>
+    {% for agent in agents %}
+    <li>Agent ID: {{ agent.agentID }}, Queue: {{ agent.queue }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
